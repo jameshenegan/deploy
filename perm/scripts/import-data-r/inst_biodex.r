@@ -1,0 +1,66 @@
+#Clear data in global environment
+rm(list=ls())
+
+#Load Hmisc library for its labeling functionality
+library(Hmisc)
+
+#Load data (update path_to_data before running)
+path_to_data <- '../data-csv/inst_biodex.csv' 
+
+data=read.csv(path_to_data)
+
+#Set variable labels
+label(data$id_addi)="Masked Participant ID for ADDI"
+label(data$visit)="Visit Number"
+label(data$contract)="muscle_activation: Type of muscle activation that causes tension on your muscle as it shortens. Allows you to generation enough force to move an object. (concentric, agonist eccentric)."
+label(data$mode)="Exercise: type of exercise given within biodex protocol (ISOM,ISOk)"
+label(data$joint)="Joint_tested: Joints that are tested. Knee is standard. "
+label(data$pattern)="Motion: Motion of joint/muscle moving forward or back. defined as EXT/FLX in data."
+label(data$protocol)=""
+label(data$side)="side of test: which joint side is being tested "
+label(data$get)="Gravity Effect Torque"
+label(data$acctime_awy)="Acceleration Time Away"
+label(data$acctime_twd)="Accerleration Time Toward"
+label(data$avepwr_awy)="Average Power Away"
+label(data$avepwr_twd)="Average Power Toward"
+label(data$cv_awy)="Coefficient of Variation Away"
+label(data$cv_twd)="Coefficient of Variation Toward"
+label(data$dectime_awy)="Deceleration Time Away"
+label(data$dectime_twd)="Deceleration Time Toward"
+label(data$maxavepktq_awy)="Maximum Average Peak Torque Away"
+label(data$maxavepktq_twd)="Maximum Average Peak Torque Toward"
+label(data$maxrepwk_awy)="Maximum Repitition of Total Work Away"
+label(data$maxrepwkrep_awy)="Maximum Work Repitition Number Away"
+label(data$maxrepwkrep_twd)="Maximum Repitition of Total Work Toward"
+label(data$maxrepwk_twd)="Maximum Work Repitition Number Toward"
+label(data$maxrom)="Maximum Range of Motion"
+label(data$peaktq_awy)="Peak Torque Away (ft-lbs)"
+label(data$peaktq_awy_nm)="Peak Torque Away (newton-meters)"
+label(data$peaktq_bw_awy)=""
+label(data$peaktq_bw_twd)=""
+label(data$peaktq_twd)="Peak Torque Toward (ft-lbs)"
+label(data$peaktq_twd_nm)="Peak Torque Toward (newton-meters)"
+label(data$posnpktq_awy)="Angle of Peak Torque Away"
+label(data$posnpktq_twd)="Angle of Peak Torque Toward"
+label(data$referral)="Protocol number: field used for tester to enter in protocol number"
+label(data$reps)="Number of Repititions"
+label(data$set_num)=""
+label(data$spd_awy)="Speed Away"
+label(data$spd_twd)="Speed Toward"
+label(data$timepktq_awy)="Time to Peak Torque Away"
+label(data$timepktq_twd)="Time to Peak Torque Toward"
+label(data$totwork_awy)="Total Work Away"
+label(data$totwork_twd)="Total Work Toward"
+label(data$tqat_awy)=""
+label(data$tqat_twd)=""
+label(data$tqin_awy)=""
+label(data$tqin_twd)=""
+label(data$weight_biodex)=""
+label(data$wkf3rd_awy)="Work First Third Away"
+label(data$wkf3rd_twd)="Work First Third Toward"
+label(data$wkl3rd_awy)="Work Last Third Away"
+label(data$wkl3rd_twd)="Work Last Third Toward"
+label(data$work_bw_away)=""
+label(data$work_bw_twd)=""
+label(data$workfat_awy)="Work Fatigue Away"
+label(data$workfat_twd)="Work Fatigue Toward"

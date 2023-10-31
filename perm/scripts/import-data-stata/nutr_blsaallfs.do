@@ -1,0 +1,365 @@
+clear
+import delimited "../data-csv/nutr_blsaallfs.csv", bindquote(strict)
+
+label variable id_addi "Masked Participant ID for ADDI"
+
+label variable visit "Visit number"
+
+label variable fs_gramamt "Gram Amount of Food (g) (food+supps)"
+
+label variable fs_kcal "Energy (kcal) (food+supps)"
+
+label variable fs_kj "Energy (kilojoules) (kj) (food+supps)"
+
+label variable fs_tcho "Total Carbohydrate (g) (food+supps)"
+
+label variable fs_fat "Total Fat (g) (food+supps)"
+
+label variable fs_pro "Total Protein (g) (food+supps)"
+
+label variable fs_vpro "Vegetable Protein (g) (food+supps)"
+
+label variable fs_apro "Animal Protein (g) (food+supps)"
+
+label variable fs_alc "Alcohol (g) (food+supps)"
+
+label variable fs_chol "Cholesterol (mg) (food+supps)"
+
+label variable fs_sfa "Total Saturated Fatty Acids (SFA) (g) (food+supps)"
+
+label variable fs_mfa "Total Monounsaturated Fatty Acids (MUFA) (g) (food+supps)"
+
+label variable fs_pfa "Total Polyunsaturated Fatty Acids (PUFA) (g) (food+supps)"
+
+label variable fs_fruc "Fructose (g) (food+supps)"
+
+label variable fs_gala "Galactose (g) (food+supps)"
+
+label variable fs_gluc "Glucose (g) (food+supps)"
+
+label variable fs_lact "Lactose (g) (food+supps)"
+
+label variable fs_malt "Maltose (g) (food+supps)"
+
+label variable fs_sucr "Sucrose (g) (food+supps)"
+
+label variable fs_star "Starch (g) (food+supps)"
+
+label variable fs_tsugar "Total Sugars (g) (food+supps)"
+
+label variable fs_dfib "Total Dietary Fiber (g) (food+supps)"
+
+label variable fs_wsdf "Soluble Dietary Fiber (g) (food+supps)"
+
+label variable fs_ifib "Insoluble Dietary Fiber (g) (food+supps)"
+
+label variable fs_pect "Pectins (g) (food+supps)"
+
+label variable fs_va "Total Vitamin A Activity (International Units) (IU) (food+supps)"
+
+label variable fs_acar "Alpha-Carotene (provitamin A carotenoid) (ug) (food+supps)"
+
+label variable fs_bceq "Beta-Carotene Equivalents (ug) (food+supps)"
+
+label variable fs_bcar "Beta-Carotene (provitamin A carotenoid) (ug) (food+supps)"
+
+label variable fs_rl "Retinol (ug) (food+supps)"
+
+label variable fs_varae "Total Vitamin A Activity (Retinol Activity Equivalents)(ug) (food+supps)"
+
+label variable fs_vare "Total Vitamin A Activity (Retinol Equivalents) (ug) (food+supps)"
+
+label variable fs_bcry "Beta-Cryptoxanthin (provitamin A caroteniod) (ug) (food+supps)"
+
+label variable fs_lyco "Lycopene (ug) (food+supps)"
+
+label variable fs_lz "Lutein + Zeaxanthin (ug) (food+supps)"
+
+label variable fs_vb6 "Vitamin B-6 (pyridoxine, pyridoxyl, & pyridoxamine) (mg) (food+supps)"
+
+label variable fs_vb12 "Vitamin B-12 (cobalamin) (ug) (food+supps)"
+
+label variable fs_fol "Total Folate (ug) (food+supps)"
+
+label variable fs_dfe "Dietary Folate Equivalents (ug) (food+supps)"
+
+label variable fs_nfol "Natural Folate (ug) (food+supps)"
+
+label variable fs_sfol "Synthetic Folate (ug) (food+supps)"
+
+label variable fs_nia "Niacin (vitamin B3) (mg) (food+supps)"
+
+label variable fs_niaeq "Niacin Equivalents (mg) (food+supps)"
+
+label variable fs_pant "Pantothenic acid (mg) (food+supps)"
+
+label variable fs_thi "Thiamin (vitamin B1) (mg) (food+supps)"
+
+label variable fs_rib "Riboflavin (vitamin B2) (mg) (food+supps)"
+
+label variable fs_choline "Choline (mg) (food+supps)"
+
+label variable fs_ttc "Total Alpha-Tocopherol Equivalents (mg) (food+supps)"
+
+label variable fs_atc "Vitamin E (Total Alpha-Tocopherol) (mg) (food+supps)"
+
+label variable fs_natatoc "Natural Alpha-Tocopherol (mg) (food+supps)"
+
+label variable fs_synatoc "Synthetic Alpha-Tocopherol (mg) (food+supps)"
+
+label variable fs_btc "Beta-Tocopherol (mg) (food+supps)"
+
+label variable fs_dtc "Delta-Tocopherol (mg) (food+supps)"
+
+label variable fs_gtc "Gamma-Tocopherol (mg) (food+supps)"
+
+label variable fs_vc "Vitamin C (ascorbic acid) (mg) (food+supps)"
+
+label variable fs_vd "Vitamin D (calciferol) (ug) (food+supps)"
+
+label variable fs_vite "Vitamin E (International Units) (IU) (food+supps)"
+
+label variable fs_vk "Vitamin K (phylloquinone) (ug) (food+supps)"
+
+label variable fs_ca "Calcium (mg) (food+supps)"
+
+label variable fs_cu "Copper (mg) (food+supps)"
+
+label variable fs_fe "Iron (mg) (food+supps)"
+
+label variable fs_k "Potassium (mg) (food+supps)"
+
+label variable fs_na "Sodium (mg) (food+supps)"
+
+label variable fs_mg "Magnesium (mg) (food+supps)"
+
+label variable fs_mn "Manganese (mg) (food+supps)"
+
+label variable fs_se "Selenium (ug) (food+supps)"
+
+label variable fs_zn "Zinc (mg) (food+supps)"
+
+label variable fs_p "Phosphorus (mg) (food+supps)"
+
+label variable fs_s04_0 "SFA 4:0 (butyric acid) (g) (food+supps)"
+
+label variable fs_s06_0 "SFA 6:0 (caproic acid) (g) (food+supps)"
+
+label variable fs_s08_0 "SFA 8:0 (caprylic acid) (g) (food+supps)"
+
+label variable fs_s10_0 "SFA 10:0 (capric acid) (g) (food+supps)"
+
+label variable fs_s12_0 "SFA 12:0 (lauric acid) (g) (food+supps)"
+
+label variable fs_s14_0 "SFA 14:0 (myristic acid) (g) (food+supps)"
+
+label variable fs_s16_0 "SFA 16:0 (palmitic acid) (g) (food+supps)"
+
+label variable fs_s17_0 "SFA 17:0 (margaric acid) (g) (food+supps)"
+
+label variable fs_s18_0 "SFA 18:0 (stearic acid) (g) (food+supps)"
+
+label variable fs_s20_0 "SFA 20:0 (arachidic acid) (g) (food+supps)"
+
+label variable fs_s22_0 "SFA 22:0 (behenic acid) (g) (food+supps)"
+
+label variable fs_m14_1 "MUFA 14:1 (myristoleic acid) (g) (food+supps)"
+
+label variable fs_m16_1 "MUFA 16:1 (palmitoleic acid) (g) (food+supps)"
+
+label variable fs_m18_1 "MUFA 18:1 (oleic acid) (g) (food+supps)"
+
+label variable fs_m20_1 "MUFA 20:1 (gadoleic acid) (g) (food+supps)"
+
+label variable fs_m22_1 "MUFA 22:1 (erucic acid) (g) (food+supps)"
+
+label variable fs_p18_2 "PUFA 18:2 (linoleic acid) (g) (food+supps)"
+
+label variable fs_p18_3 "PUFA 18:3 (linolenic acid) (g) (food+supps)"
+
+label variable fs_p18_4 "PUFA 18:4 (parinaric acid) (g) (food+supps)"
+
+label variable fs_p20_4 "PUFA 20:4 (arachidonic acid) (g) (food+supps)"
+
+label variable fs_p20_5 "PUFA 20:5 (eicosapentaenoic acid [EPA]) (g) (food+supps)"
+
+label variable fs_p22_5 "PUFA 22:5 (docosapentaenoic acid [DPA]) (g) (food+supps)"
+
+label variable fs_p22_6 "PUFA 22:6 (docosahexaenoic acid [DHA]) (g) (food+supps)"
+
+label variable fs_f161t "TRANS 16:1 (trans-hexadecenoic acid) (g) (food+supps)"
+
+label variable fs_f181t "TRANS 18:1 (trans-octadecenoic acid [elaidic acid]) (g) (food+supps)"
+
+label variable fs_f182t "TRANS 18:2 (trans-octadecadienoic acid (g) (food+supps)"
+
+label variable fs_ttfa "Total Trans-Fatty Acids (TRANS) (g) (food+supps)"
+
+label variable fs_omega3 "Omega-3 Fatty Acids (g) (food+supps)"
+
+label variable fs_cyst "Cystine (g) (food+supps)"
+
+label variable fs_glut "Glutamic Acid (g) (food+supps)"
+
+label variable fs_glyc "Glycine (g) (food+supps)"
+
+label variable fs_isol "Isoleucine (g) (food+supps)"
+
+label variable fs_hist "Histidine (g) (food+supps)"
+
+label variable fs_leuc "Leucine (g) (food+supps)"
+
+label variable fs_lysi "Lysine (g) (food+supps)"
+
+label variable fs_meth "Methionine (g) (food+supps)"
+
+label variable fs_phen "Phenylalanine (g) (food+supps)"
+
+label variable fs_prol "Proline (g) (food+supps)"
+
+label variable fs_seri "Serine (g) (food+supps)"
+
+label variable fs_thre "Threonine (g) (food+supps)"
+
+label variable fs_tryp "Tryptophan (g) (food+supps)"
+
+label variable fs_alan "Alanine (g) (food+supps)"
+
+label variable fs_argi "Arginine (g) (food+supps)"
+
+label variable fs_aspa "Aspartic Acid (g) (food+supps)"
+
+label variable fs_tyro "Tyrosine (g) (food+supps)"
+
+label variable fs_vali "Valine (g) (food+supps)"
+
+label variable fs_mh3 "3-Methylhistidine (mg) (food+supps)"
+
+label variable fs_aspt "Aspartame (mg) (food+supps)"
+
+label variable fs_sacc "Saccharin (mg) (food+supps)"
+
+label variable fs_glyt "Glycitein (mg) (food+supps)"
+
+label variable fs_coum "Coumestrol (mg) (food+supps)"
+
+label variable fs_daid "Daidzein (mg) (food+supps)"
+
+label variable fs_betaine "Betaine (mg) (food+supps)"
+
+label variable fs_bioa "Biochanin A (mg) (food+supps)"
+
+label variable fs_formon "Formononetin (mg) (food+supps)"
+
+label variable fs_geni "Genistein (mg) (food+supps)"
+
+label variable fs_eryth "Erythritol (g) (food+supps)"
+
+label variable fs_maltito "Maltitol (g) (food+supps)"
+
+label variable fs_mani "Mannitol (g) (food+supps)"
+
+label variable fs_inos "Inositol (g) (food+supps)"
+
+label variable fs_isom "Isomalt (g) (food+supps)"
+
+label variable fs_lactl "Lactitol (g) (food+supps)"
+
+label variable fs_pini "Pinitol (g) (food+supps)"
+
+label variable fs_sorb "Sorbitol (g) (food+supps)"
+
+label variable fs_xyli "Xylitol (g) (food+supps)"
+
+label variable fs_acho "Available Carbohydrate (g) (food+supps)"
+
+label variable fs_asugar "Added Sugars (g) (food+supps)"
+
+label variable fs_sucl "Sucralose (mg) (food+supps)"
+
+label variable fs_acesk "Acesulfame Potassium (mg) (food+supps)"
+
+label variable fs_oxal "Oxalic Acid (mg) (food+supps)"
+
+label variable fs_phyt "Phytic Acid (mg) (food+supps)"
+
+label variable fs_sp "Sucrose polyester (g) (food+supps)"
+
+label variable fs_caf "Caffeine (mg) (food+supps)"
+
+label variable fs_ash "Ash (g) (food+supps)"
+
+label variable fs_w "Water (g) (food+supps)"
+
+label variable fs_nitr "Nitrogen (g) (food+supps)"
+
+label variable fs_grain_tot "Grain Serving: Total Grain (servings) (food+supps)"
+
+label variable fs_grain_who "Grain Serving: Whole Grain (servings) (food+supps)"
+
+label variable fs_grain_nwh "Grain Serving: Non Whole Grain (servings) (food+supps)"
+
+label variable fs_gl "Deitary Glycemic load (food+supps)"
+
+label variable fs_gi "Dietary Glycemic Index (food+supps)"
+
+label variable age_cat "Sex category"
+
+label variable diet_type "specific diet regimen"
+
+label variable meal_place_brk "usual place for breakfast"
+
+label variable meal_place_lun "usual place for lunch"
+
+label variable meal_place_din "usual place for dinner/supper"
+
+label variable supp_use "yes to supplement use question"
+
+label variable supdur_1 "Duration of multi-vitamin use"
+
+label variable supdur_2 "Duration of mult-vitamin Senior formula use"
+
+label variable supdur_3 "Duration of Stress Tab, B-Complex use"
+
+label variable supdur_4 "Duration of Calcium-Vitamin D use"
+
+label variable supdur_5 "Duration of Vitamin A use"
+
+label variable supdur_6 "Duration of Vitamin C use"
+
+label variable supdur_7 "Duration of Vitamin D use"
+
+label variable supdur_8 "Duration of Vitamin E use"
+
+label variable supdur_9 "Duration of Folic Acid use"
+
+label variable supdur_10 "Duration of Vitamin B6 use"
+
+label variable supdur_11 "Duration of Vitamin B12 use"
+
+label variable supdur_12 "Duration of Calcium use"
+
+label variable supdur_13 "Duration of Magnesium use"
+
+label variable supdur_14 "Duration of Potassium use"
+
+label variable supdur_15 "Duration of Iron use"
+
+label variable supdur_16 "Duration of Selenium use"
+
+label variable supdur_17 "Duration of Fish oil use"
+
+label variable supdur_18 "Duration of Ca containing antacid use"
+
+label variable supdur_19 "Duration of Mg containing antacid use"
+
+label variable frt_variety "number of fruits selected for consumption"
+
+label variable frt_frq_reported "servings of fruit reported in fruit section */"
+
+label variable veg_variety "number of vegetables selected for consumption"
+
+label variable veg_frq_reported "servings of veg reported in vegetable section (includes lettuce) */"
+
+label variable invalid "0/1 Invalid questionnaire"
+
